@@ -1,0 +1,32 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="static/css/style.css">
+        <style>
+            body {
+              background-image: url('static/css/image.jpeg');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: 100% 100%;
+            }
+            </style>
+
+    </head>
+    <script>
+        document.getElementByID("demo").innerHTML = document.getElementById("ten");
+    </script>
+<body>
+<form action="/method" method="POST" enctype = "multipart/form-data">
+<div class="container">
+    <!--<div class="brand-logo"></div>-->
+    <div class="brand-title">Predict the oil price</div>
+    <div class="inputs">
+      <!-- <label>Enter Price</label> -->
+      <input type="text" placeholder="Enter ten days price" id="ten" name="val"/>
+      <button type="submit">Predict</button><br><br>
+        The next day price is :  {{prediction}}
+    </div>
+  </div>
+</form>
+</body>
+</html>
